@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #111;
+}
+
+.movie_Containers {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.movie_Containers::-webkit-scrollbar {
+  display: none;
+}
+
+.movies {
+  width: 100%;
+  object-fit: contain;
+  max-height: 160px;
+  margin: 10px;
+  transition: 400ms;
+  cursor: pointer;
+}
+.movies:hover {
+  transform: scale(1.1);
+}
+.row {
+  padding: 0px 40px;
+}
+.row h2 {
+  margin: 20px 0px;
+  color:white;
+}
+.header {
+  background-color: black;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+.logo {
+  width: 100px;
+  object-fit: contain;
+}
+.avtar {
+  width: 40px;
+  object-fit: contain;
+}
+.banner {
+  width: 100%;
+  height: 560px;
+  display: flex;
+  align-items: center;
+}
+.banner_section {
+  padding: 40px;
+  border-radius: 5px;
+  width: 50%;
+}
+.banner_section h2 {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.banner_section p {
+  font-size: 20px;
+  color: white;
+  line-height: 1.6rem;
+}
+.banner_section .play {
+  background-color: #939393;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  margin: 0px 5px;
+}
+.banner_section .buttons {
+  margin-top: 40px;
+}
+.banner_section .play:hover {
+  background-color: #858484;
+}
+
+.banner_section .watch_list {
+  background-color: #939393;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  margin: 0px 5px;
+}
+.banner_section .watch_list:hover {
+  background-color: #858484;
+}
+.isLarge {
+  max-height: 350px;
+}
+.isLarge:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width:560px){
+  .banner_section{
+    width:100%;
+  }
+  .movies {
+    width: 100%;
+    object-fit: contain;
+    max-height: 50px;
+  }
+  .banner_section .play{
+    margin:10px;
+  }
+  .isLarge {
+    max-height: 200px;
+  }
+  .banner_section{
+    padding: 15px;
+  }
+}
